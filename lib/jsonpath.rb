@@ -89,7 +89,7 @@ class JsonPath
 
   def fetch_all_path(obj)
     all_paths = ['$']
-    find_path(obj, '$', all_paths, false)
+    find_path(obj, '$', all_paths, obj.class == Array)
     return all_paths
   end
 
